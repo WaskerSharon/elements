@@ -1,0 +1,94 @@
+@import 'mixins';
+@import 'colors';
+@import 'navbar';
+@import 'mainPage';
+
+/* css reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none; 
+  color: inherit; 
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  color: inherit; 
+  border-width: 0;
+  cursor: pointer;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+}
+
+ul, ol, dd {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit; 
+  font-weight: inherit;
+}
+
+cite {
+  font-style: normal;
+}
+
+fieldset {
+  border-width: 0;
+}
+
+/* end of css reset */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family:  'Ubuntu', 'Cantarell', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p, a {
+  font-size: 2rem;
+}
+
+.App {
+    text-align: center;
+  
+    background-color: rgb(132, 216, 255);
+    background-image: linear-gradient(to bottom right, rgb(17, 113, 158), rgb(131, 247, 255));
+  
+    &-header {
+      @include flexCenter();
+      min-height: 100vh;
+      flex-direction: column;
+      color: $primary-text-color;
+    }
+  }

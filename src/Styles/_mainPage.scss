@@ -1,0 +1,8 @@
+
+.mainPage__header {
+    @include flexCenter();
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 10rem;
+    height: 10rem;
+}
